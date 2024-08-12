@@ -13,7 +13,9 @@
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"peerDependencies": {
 		"viem": "^2.19.4"
 	},
@@ -37,7 +39,9 @@
 		"vite-plugin-dts": "^4.0.2"
 	},
 	"release": {
-		"branches": ["master"],
+		"branches": [
+			"master"
+		],
 		"repositoryUrl": "https://github.com/betfinio/abi.git",
 		"plugins": [
 			"@semantic-release/commit-analyzer",
