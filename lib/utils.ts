@@ -19,7 +19,7 @@ export const truncateEthAddress = (address: Address, length = 3) => {
 	return `${match[1]}…${match[2]}`;
 };
 
-export default function arrayFrom(n: number) {
+export function arrayFrom(n: number) {
 	return Array.from(Array(n).keys());
 }
 
