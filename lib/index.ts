@@ -13,6 +13,7 @@ import BetInterfaceABI from './contracts/BetInterface.json';
 import PartnerABI from './contracts/Partner.json';
 import CoreABI from './contracts/Core.json';
 import MultimintABI from './contracts/Multimint.json';
+import DataFeedABI from './contracts/DataFeed.json';
 import BetsMemoryABI from './contracts/BetsMemory.json';
 import AffiliateABI from './contracts/Affiliate.json';
 import AffiliateFundABI from './contracts/AffiliateFund.json';
@@ -68,6 +69,9 @@ export const BetInterfaceContract = {
 
 export const PartnerContract = {
 	abi: PartnerABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
+};
+export const DataFeedContract = {
+	abi: DataFeedABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
 };
 export const CoreContract = {
 	abi: CoreABI,
