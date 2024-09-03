@@ -9,6 +9,8 @@ import PassABI from './contracts/Pass.json';
 import RouletteABI from './contracts/Roulette.json';
 import RouletteBetABI from './contracts/RouletteBet.json';
 import PredictGameABI from './contracts/PredictGame.json';
+import StonesABI from './contracts/Stones.json';
+import StonesBetABI from './contracts/StonesBet.json';
 import BetInterfaceABI from './contracts/BetInterface.json';
 import PartnerABI from './contracts/Partner.json';
 import CoreABI from './contracts/Core.json';
@@ -93,6 +95,12 @@ export const PredictContract = {
 };
 export const PredictBetContract = {
 	abi: PredictBetABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
+};
+export const StonesContract = {
+	abi: StonesABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
+};
+export const StonesBetContract = {
+	abi: StonesBetABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
 };
 export const HelperContract = {
 	abi: HelperABI as readonly Narrow<Narrow<AbiConstructor | AbiError | AbiEvent | AbiFallback | AbiFunction | AbiReceive>>[],
