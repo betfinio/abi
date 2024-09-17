@@ -1,7 +1,7 @@
 {
 	"name": "@betfinio/abi",
 	"type": "module",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"repository": {
 		"url": "https://github.com/betfinio/abi.git"
 	},
