@@ -21,6 +21,11 @@
 				"name": "_side",
 				"type": "uint256",
 				"internalType": "uint256"
+			},
+			{
+				"name": "_order",
+				"type": "uint256",
+				"internalType": "uint256"
 			}
 		],
 		"stateMutability": "nonpayable"
@@ -98,6 +103,19 @@
 				"name": "",
 				"type": "address",
 				"internalType": "address"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "getOrder",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
 			}
 		],
 		"stateMutability": "view"
@@ -228,6 +246,32 @@
 				"type": "address",
 				"indexed": true,
 				"internalType": "address"
+			}
+		],
+		"anonymous": false
+	},
+	{
+		"type": "event",
+		"name": "ResultChanged",
+		"inputs": [
+			{
+				"name": "result",
+				"type": "uint256",
+				"indexed": true,
+				"internalType": "uint256"
+			}
+		],
+		"anonymous": false
+	},
+	{
+		"type": "event",
+		"name": "StatusChanged",
+		"inputs": [
+			{
+				"name": "status",
+				"type": "uint256",
+				"indexed": true,
+				"internalType": "uint256"
 			}
 		],
 		"anonymous": false
