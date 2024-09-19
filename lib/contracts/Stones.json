@@ -195,6 +195,30 @@
 	},
 	{
 		"type": "function",
+		"name": "getRoundBetsCountBySide",
+		"inputs": [
+			{
+				"name": "_round",
+				"type": "uint256",
+				"internalType": "uint256"
+			},
+			{
+				"name": "_side",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
 		"name": "getRoundSideBank",
 		"inputs": [
 			{
@@ -716,19 +740,6 @@
 				"type": "address",
 				"indexed": true,
 				"internalType": "address"
-			}
-		],
-		"anonymous": false
-	},
-	{
-		"type": "event",
-		"name": "PayoutDistributed",
-		"inputs": [
-			{
-				"name": "round",
-				"type": "uint256",
-				"indexed": true,
-				"internalType": "uint256"
 			}
 		],
 		"anonymous": false
