@@ -26,6 +26,7 @@ import LuckyRoundABI from "./contracts/LuckyRound.json";
 import LuckyRoundBetABI from "./contracts/LuckyRoundBet.json";
 import EventFactoryABI from "./contracts/EventFactory.json";
 import EventABI from "./contracts/Event.json";
+import EventBetABI from "./contracts/EventBet.json";
 
 export const TokenContract = {
 	abi: TokenABI as readonly Narrow<
@@ -321,6 +322,19 @@ export const EventFactoryContract = {
 
 export const EventContract = {
 	abi: EventABI as readonly Narrow<
+		Narrow<
+			| AbiConstructor
+			| AbiError
+			| AbiEvent
+			| AbiFallback
+			| AbiFunction
+			| AbiReceive
+		>
+	>[],
+};
+
+export const EventBetContract = {
+	abi: EventBetABI as readonly Narrow<
 		Narrow<
 			| AbiConstructor
 			| AbiError
