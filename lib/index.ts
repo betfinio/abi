@@ -32,3 +32,5 @@ export * from "./contracts/EventFactory.ts";
 export * from "./contracts/Event.ts";
 export * from "./contracts/EventBet.ts";
 export * from "./contracts/Faucet.ts";
+export * from "./contracts/HighLow.ts";
+export * from "./contracts/HighLowBet.ts";
