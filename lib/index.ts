@@ -31,3 +31,4 @@ export * from "./contracts/LuckyRoundBet.ts";
 export * from "./contracts/EventFactory.ts";
 export * from "./contracts/Event.ts";
 export * from "./contracts/EventBet.ts";
+export * from "./contracts/Faucet.ts";
