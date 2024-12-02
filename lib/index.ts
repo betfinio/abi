@@ -34,3 +34,7 @@ export * from "./contracts/EventBet.ts";
 export * from "./contracts/Faucet.ts";
 export * from "./contracts/HighLow.ts";
 export * from "./contracts/HighLowBet.ts";
+export * from "./contracts/LiroBet.ts";
+export * from "./contracts/LiveRoulette.ts";
+export * from "./contracts/SinglePlayerTable.ts";
+export * from "./contracts/MultiPlayerTable.ts";
