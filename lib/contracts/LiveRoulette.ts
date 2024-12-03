@@ -575,9 +575,15 @@ export const LiveRouletteABI = [
 				internalType: "uint256",
 			},
 			{
+				name: "player",
+				type: "address",
+				indexed: true,
+				internalType: "address",
+			},
+			{
 				name: "value",
 				type: "uint256",
-				indexed: true,
+				indexed: false,
 				internalType: "uint256",
 			},
 		],
@@ -600,15 +606,9 @@ export const LiveRouletteABI = [
 				internalType: "uint256",
 			},
 			{
-				name: "requestId",
-				type: "uint256",
-				indexed: true,
-				internalType: "uint256",
-			},
-			{
 				name: "player",
 				type: "address",
-				indexed: false,
+				indexed: true,
 				internalType: "address",
 			},
 		],
