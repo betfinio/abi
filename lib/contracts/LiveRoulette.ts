@@ -1,4 +1,4 @@
-export const LiveRoulette = [
+export const LiveRouletteABI = [
 	{
 		type: "constructor",
 		inputs: [
@@ -385,11 +385,6 @@ export const LiveRoulette = [
 				type: "uint256",
 				internalType: "uint256",
 			},
-			{
-				name: "payout",
-				type: "uint256",
-				internalType: "uint256",
-			},
 		],
 		outputs: [],
 		stateMutability: "nonpayable",
@@ -555,16 +550,35 @@ export const LiveRoulette = [
 				internalType: "uint256",
 			},
 			{
-				name: "payout",
-				type: "uint256",
-				indexed: false,
-				internalType: "uint256",
-			},
-			{
 				name: "table",
 				type: "address",
 				indexed: false,
 				internalType: "address",
+			},
+		],
+		anonymous: false,
+	},
+	{
+		type: "event",
+		name: "RandomGenerated",
+		inputs: [
+			{
+				name: "table",
+				type: "address",
+				indexed: true,
+				internalType: "address",
+			},
+			{
+				name: "round",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
+			},
+			{
+				name: "value",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
 			},
 		],
 		anonymous: false,
