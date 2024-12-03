@@ -605,6 +605,12 @@ export const LiveRouletteABI = [
 				indexed: true,
 				internalType: "uint256",
 			},
+			{
+				name: "player",
+				type: "address",
+				indexed: false,
+				internalType: "address",
+			},
 		],
 		anonymous: false,
 	},
