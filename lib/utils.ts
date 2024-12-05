@@ -1,6 +1,7 @@
 import type { Address } from 'viem';
 
-export const ZeroAddress: Address = '0x0000000000000000000000000000000000000000';
+export const ZeroAddress: Address =
+	"0x0000000000000000000000000000000000000000";
 
 export const valueToNumber = (rawBalance?: bigint, pow = 18, precise = 3) => {
 	return (Number(rawBalance || 0n) / 10 ** pow).round(precise);

@@ -203,6 +203,19 @@ export const LiroBetABI = [
 	},
 	{
 		type: "function",
+		name: "getTable",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "address",
+				internalType: "address",
+			},
+		],
+		stateMutability: "view",
+	},
+	{
+		type: "function",
 		name: "owner",
 		inputs: [],
 		outputs: [
