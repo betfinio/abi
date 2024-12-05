@@ -38,3 +38,7 @@ export * from "./contracts/LiroBet.ts";
 export * from "./contracts/LiveRoulette.ts";
 export * from "./contracts/SinglePlayerTable.ts";
 export * from "./contracts/MultiPlayerTable.ts";
+export * from "./contracts/Lottery.ts";
+export * from "./contracts/LotteryBet.ts";
+export * from "./contracts/LotteryRound.ts";
+
