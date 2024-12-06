@@ -504,31 +504,6 @@ export const LiveRouletteABI = [
 	},
 	{
 		type: "event",
-		name: "BetPlaced",
-		inputs: [
-			{
-				name: "bet",
-				type: "address",
-				indexed: true,
-				internalType: "address",
-			},
-			{
-				name: "table",
-				type: "address",
-				indexed: true,
-				internalType: "address",
-			},
-			{
-				name: "round",
-				type: "uint256",
-				indexed: true,
-				internalType: "uint256",
-			},
-		],
-		anonymous: false,
-	},
-	{
-		type: "event",
 		name: "LimitChanged",
 		inputs: [
 			{

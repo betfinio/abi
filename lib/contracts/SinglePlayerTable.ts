@@ -44,6 +44,25 @@ export const SinglePlayerTableABI = [
 	},
 	{
 		type: "function",
+		name: "bets",
+		inputs: [
+			{
+				name: "bet",
+				type: "address",
+				internalType: "address",
+			},
+		],
+		outputs: [
+			{
+				name: "exists",
+				type: "bool",
+				internalType: "bool",
+			},
+		],
+		stateMutability: "view",
+	},
+	{
+		type: "function",
 		name: "getBitMapPayout",
 		inputs: [
 			{
@@ -243,11 +262,6 @@ export const SinglePlayerTableABI = [
 				type: "uint256",
 				internalType: "uint256",
 			},
-			{
-				name: "_payout",
-				type: "uint256",
-				internalType: "uint256",
-			},
 		],
 		outputs: [],
 		stateMutability: "nonpayable",
@@ -264,6 +278,37 @@ export const SinglePlayerTableABI = [
 		],
 		outputs: [],
 		stateMutability: "nonpayable",
+	},
+	{
+		type: "event",
+		name: "BetEnded",
+		inputs: [
+			{
+				name: "bet",
+				type: "address",
+				indexed: true,
+				internalType: "address",
+			},
+			{
+				name: "round",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
+			},
+			{
+				name: "value",
+				type: "uint256",
+				indexed: false,
+				internalType: "uint256",
+			},
+			{
+				name: "winAmount",
+				type: "uint256",
+				indexed: false,
+				internalType: "uint256",
+			},
+		],
+		anonymous: false,
 	},
 	{
 		type: "event",
@@ -302,12 +347,6 @@ export const SinglePlayerTableABI = [
 			},
 			{
 				name: "max",
-				type: "uint256",
-				indexed: false,
-				internalType: "uint256",
-			},
-			{
-				name: "payout",
 				type: "uint256",
 				indexed: false,
 				internalType: "uint256",

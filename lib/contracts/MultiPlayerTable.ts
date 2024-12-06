@@ -280,11 +280,6 @@ export const MultiPlayerTableABI = [
 				type: "uint256",
 				internalType: "uint256",
 			},
-			{
-				name: "_payout",
-				type: "uint256",
-				internalType: "uint256",
-			},
 		],
 		outputs: [],
 		stateMutability: "nonpayable",
@@ -336,6 +331,37 @@ export const MultiPlayerTableABI = [
 	},
 	{
 		type: "event",
+		name: "BetEnded",
+		inputs: [
+			{
+				name: "bet",
+				type: "address",
+				indexed: true,
+				internalType: "address",
+			},
+			{
+				name: "round",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
+			},
+			{
+				name: "value",
+				type: "uint256",
+				indexed: false,
+				internalType: "uint256",
+			},
+			{
+				name: "winAmount",
+				type: "uint256",
+				indexed: false,
+				internalType: "uint256",
+			},
+		],
+		anonymous: false,
+	},
+	{
+		type: "event",
 		name: "BetPlaced",
 		inputs: [
 			{
@@ -371,12 +397,6 @@ export const MultiPlayerTableABI = [
 			},
 			{
 				name: "max",
-				type: "uint256",
-				indexed: false,
-				internalType: "uint256",
-			},
-			{
-				name: "payout",
 				type: "uint256",
 				indexed: false,
 				internalType: "uint256",
@@ -438,4 +458,4 @@ export const MultiPlayerTableABI = [
 			},
 		],
 	},
-];
+] as const;
