@@ -123,6 +123,19 @@ export const LotteryABI = [
 	},
 	{
 		type: "function",
+		name: "additionalJackpot",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "uint256",
+				internalType: "uint256",
+			},
+		],
+		stateMutability: "view",
+	},
+	{
+		type: "function",
 		name: "approve",
 		inputs: [
 			{
@@ -160,20 +173,26 @@ export const LotteryABI = [
 	},
 	{
 		type: "function",
-		name: "claim",
+		name: "bets",
 		inputs: [
 			{
-				name: "id",
+				name: "tokenId",
 				type: "uint256",
 				internalType: "uint256",
 			},
 		],
-		outputs: [],
-		stateMutability: "nonpayable",
+		outputs: [
+			{
+				name: "bet",
+				type: "address",
+				internalType: "address",
+			},
+		],
+		stateMutability: "view",
 	},
 	{
 		type: "function",
-		name: "claimByService",
+		name: "claim",
 		inputs: [
 			{
 				name: "id",
@@ -201,6 +220,36 @@ export const LotteryABI = [
 				internalType: "address",
 			},
 		],
+		stateMutability: "nonpayable",
+	},
+	{
+		type: "function",
+		name: "editTicket",
+		inputs: [
+			{
+				name: "id",
+				type: "uint256",
+				internalType: "uint256",
+			},
+			{
+				name: "_newTickets",
+				type: "tuple[]",
+				internalType: "struct Library.Ticket[]",
+				components: [
+					{
+						name: "symbol",
+						type: "uint8",
+						internalType: "uint8",
+					},
+					{
+						name: "numbers",
+						type: "uint32",
+						internalType: "uint32",
+					},
+				],
+			},
+		],
+		outputs: [],
 		stateMutability: "nonpayable",
 	},
 	{
@@ -484,6 +533,25 @@ export const LotteryABI = [
 	},
 	{
 		type: "function",
+		name: "rounds",
+		inputs: [
+			{
+				name: "round",
+				type: "address",
+				internalType: "address",
+			},
+		],
+		outputs: [
+			{
+				name: "exists",
+				type: "bool",
+				internalType: "bool",
+			},
+		],
+		stateMutability: "view",
+	},
+	{
+		type: "function",
 		name: "safeTransferFrom",
 		inputs: [
 			{
@@ -726,6 +794,19 @@ export const LotteryABI = [
 		stateMutability: "nonpayable",
 	},
 	{
+		type: "function",
+		name: "updateJackpot",
+		inputs: [
+			{
+				name: "_jackpot",
+				type: "uint256",
+				internalType: "uint256",
+			},
+		],
+		outputs: [],
+		stateMutability: "nonpayable",
+	},
+	{
 		type: "event",
 		name: "Approval",
 		inputs: [
@@ -771,6 +852,25 @@ export const LotteryABI = [
 				type: "bool",
 				indexed: false,
 				internalType: "bool",
+			},
+		],
+		anonymous: false,
+	},
+	{
+		type: "event",
+		name: "JackpotWon",
+		inputs: [
+			{
+				name: "round",
+				type: "address",
+				indexed: true,
+				internalType: "address",
+			},
+			{
+				name: "amount",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
 			},
 		],
 		anonymous: false,
@@ -865,6 +965,25 @@ export const LotteryABI = [
 				type: "uint256",
 				indexed: true,
 				internalType: "uint256",
+			},
+		],
+		anonymous: false,
+	},
+	{
+		type: "event",
+		name: "TicketsEdited",
+		inputs: [
+			{
+				name: "id",
+				type: "uint256",
+				indexed: true,
+				internalType: "uint256",
+			},
+			{
+				name: "bet",
+				type: "address",
+				indexed: true,
+				internalType: "address",
 			},
 		],
 		anonymous: false,
