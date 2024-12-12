@@ -41,4 +41,4 @@ export * from "./contracts/MultiPlayerTable.ts";
 export * from "./contracts/Lottery.ts";
 export * from "./contracts/LotteryBet.ts";
 export * from "./contracts/LotteryRound.ts";
-
+export * from "./contracts/MultiBet.ts";
