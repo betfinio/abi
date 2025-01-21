@@ -5,30 +5,30 @@ export const LotteryBetABI = [
 			{
 				name: "_player",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "_amount",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "_game",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "_tokenId",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "_round",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -38,10 +38,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -51,10 +51,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -64,10 +64,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -81,24 +81,29 @@ export const LotteryBetABI = [
 					{
 						name: "symbol",
 						type: "uint8",
-						internalType: "uint8",
+						internalType: "uint8"
 					},
 					{
 						name: "numbers",
 						type: "uint32",
-						internalType: "uint32",
-					},
-				],
-			},
+						internalType: "uint32"
+					}
+				]
+			}
 		],
 		outputs: [
 			{
 				name: "coef",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
+			{
+				name: "jackpot",
+				type: "bool",
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -107,11 +112,11 @@ export const LotteryBetABI = [
 			{
 				name: "_player",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -121,10 +126,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -134,35 +139,35 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -172,10 +177,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -185,10 +190,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -198,10 +203,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -211,10 +216,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -224,10 +229,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -236,17 +241,17 @@ export const LotteryBetABI = [
 			{
 				name: "role",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -256,10 +261,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -269,10 +274,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -282,10 +287,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "bytes[]",
-				internalType: "bytes[]",
-			},
+				internalType: "bytes[]"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -295,10 +300,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -308,10 +313,10 @@ export const LotteryBetABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -320,16 +325,16 @@ export const LotteryBetABI = [
 			{
 				name: "role",
 				type: "bytes32",
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "account",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -338,29 +343,42 @@ export const LotteryBetABI = [
 			{
 				name: "role",
 				type: "bytes32",
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "account",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
+	},
+	{
+		type: "function",
+		name: "isSymbolUnlocked",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "bool",
+				internalType: "bool"
+			}
+		],
+		stateMutability: "view"
 	},
 	{
 		type: "function",
 		name: "refund",
 		inputs: [],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -369,16 +387,16 @@ export const LotteryBetABI = [
 			{
 				name: "role",
 				type: "bytes32",
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "callerConfirmation",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -387,16 +405,16 @@ export const LotteryBetABI = [
 			{
 				name: "role",
 				type: "bytes32",
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "account",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -405,11 +423,11 @@ export const LotteryBetABI = [
 			{
 				name: "_result",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -423,18 +441,18 @@ export const LotteryBetABI = [
 					{
 						name: "symbol",
 						type: "uint8",
-						internalType: "uint8",
+						internalType: "uint8"
 					},
 					{
 						name: "numbers",
 						type: "uint32",
-						internalType: "uint32",
-					},
-				],
-			},
+						internalType: "uint32"
+					}
+				]
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -443,17 +461,17 @@ export const LotteryBetABI = [
 			{
 				name: "interfaceId",
 				type: "bytes4",
-				internalType: "bytes4",
-			},
+				internalType: "bytes4"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "event",
@@ -463,10 +481,10 @@ export const LotteryBetABI = [
 				name: "player",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -476,22 +494,22 @@ export const LotteryBetABI = [
 				name: "role",
 				type: "bytes32",
 				indexed: true,
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "previousAdminRole",
 				type: "bytes32",
 				indexed: true,
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "newAdminRole",
 				type: "bytes32",
 				indexed: true,
-				internalType: "bytes32",
-			},
+				internalType: "bytes32"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -501,22 +519,22 @@ export const LotteryBetABI = [
 				name: "role",
 				type: "bytes32",
 				indexed: true,
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "account",
 				type: "address",
 				indexed: true,
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "sender",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -526,27 +544,27 @@ export const LotteryBetABI = [
 				name: "role",
 				type: "bytes32",
 				indexed: true,
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "account",
 				type: "address",
 				indexed: true,
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "sender",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "error",
 		name: "AccessControlBadConfirmation",
-		inputs: [],
+		inputs: []
 	},
 	{
 		type: "error",
@@ -555,13 +573,13 @@ export const LotteryBetABI = [
 			{
 				name: "account",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "neededRole",
 				type: "bytes32",
-				internalType: "bytes32",
-			},
-		],
-	},
+				internalType: "bytes32"
+			}
+		]
+	}
 ] as const;

@@ -5,35 +5,48 @@ export const LotteryRoundABI = [
 			{
 				name: "_lottery",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "_finish",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "_coordinator",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "_subscriptionId",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "_keyHash",
 				type: "bytes32",
-				internalType: "bytes32",
+				internalType: "bytes32"
 			},
 			{
 				name: "_ticketPrice",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
+	},
+	{
+		type: "function",
+		name: "RECOVER_PERIOD",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "uint256",
+				internalType: "uint256"
+			}
+		],
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -43,17 +56,17 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
 		name: "acceptOwnership",
 		inputs: [],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -62,17 +75,17 @@ export const LotteryRoundABI = [
 			{
 				name: "bitmap",
 				type: "bytes",
-				internalType: "bytes",
-			},
+				internalType: "bytes"
+			}
 		],
 		outputs: [
 			{
 				name: "bet",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -81,17 +94,47 @@ export const LotteryRoundABI = [
 			{
 				name: "_bet",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
+	},
+	{
+		type: "function",
+		name: "editTickets",
+		inputs: [
+			{
+				name: "_bet",
+				type: "address",
+				internalType: "address"
+			},
+			{
+				name: "_tickets",
+				type: "tuple[]",
+				internalType: "struct Library.Ticket[]",
+				components: [
+					{
+						name: "symbol",
+						type: "uint8",
+						internalType: "uint8"
+					},
+					{
+						name: "numbers",
+						type: "uint32",
+						internalType: "uint32"
+					}
+				]
+			}
+		],
+		outputs: [],
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -100,17 +143,17 @@ export const LotteryRoundABI = [
 			{
 				name: "bitmap",
 				type: "bytes",
-				internalType: "bytes",
-			},
+				internalType: "bytes"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -120,10 +163,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -133,10 +176,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -146,10 +189,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint8",
-				internalType: "uint8",
-			},
+				internalType: "uint8"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -159,10 +202,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -171,17 +214,17 @@ export const LotteryRoundABI = [
 			{
 				name: "bitmap",
 				type: "bytes",
-				internalType: "bytes",
-			},
+				internalType: "bytes"
+			}
 		],
 		outputs: [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -191,10 +234,23 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "bool",
-				internalType: "bool",
-			},
+				internalType: "bool"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
+	},
+	{
+		type: "function",
+		name: "jackpotWon",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "bool",
+				internalType: "bool"
+			}
+		],
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -204,10 +260,17 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
+	},
+	{
+		type: "function",
+		name: "processJackpot",
+		inputs: [],
+		outputs: [],
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -216,16 +279,16 @@ export const LotteryRoundABI = [
 			{
 				name: "requestId",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "randomWords",
 				type: "uint256[]",
-				internalType: "uint256[]",
-			},
+				internalType: "uint256[]"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -234,16 +297,16 @@ export const LotteryRoundABI = [
 			{
 				name: "offset",
 				type: "uint256",
-				internalType: "uint256",
+				internalType: "uint256"
 			},
 			{
 				name: "limit",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -252,18 +315,31 @@ export const LotteryRoundABI = [
 			{
 				name: "_bet",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
 		name: "requestRandomness",
 		inputs: [],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
+	},
+	{
+		type: "function",
+		name: "requestedTime",
+		inputs: [],
+		outputs: [
+			{
+				name: "",
+				type: "uint256",
+				internalType: "uint256"
+			}
+		],
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -273,10 +349,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "address",
-				internalType: "contract IVRFCoordinatorV2Plus",
-			},
+				internalType: "contract IVRFCoordinatorV2Plus"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -285,43 +361,25 @@ export const LotteryRoundABI = [
 			{
 				name: "_vrfCoordinator",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
-		name: "setWinTicket",
-		inputs: [
-			{
-				name: "_winTicket",
-				type: "tuple",
-				internalType: "struct Library.Ticket",
-				components: [
-					{
-						name: "symbol",
-						type: "uint8",
-						internalType: "uint8",
-					},
-					{
-						name: "numbers",
-						type: "uint32",
-						internalType: "uint32",
-					},
-				],
-			},
-		],
+		name: "startRecover",
+		inputs: [],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
 		name: "startRefund",
 		inputs: [],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -331,10 +389,10 @@ export const LotteryRoundABI = [
 			{
 				name: "",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "function",
@@ -343,11 +401,11 @@ export const LotteryRoundABI = [
 			{
 				name: "to",
 				type: "address",
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -356,11 +414,11 @@ export const LotteryRoundABI = [
 			{
 				name: "_finish",
 				type: "uint256",
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
 		outputs: [],
-		stateMutability: "nonpayable",
+		stateMutability: "nonpayable"
 	},
 	{
 		type: "function",
@@ -370,15 +428,15 @@ export const LotteryRoundABI = [
 			{
 				name: "symbol",
 				type: "uint8",
-				internalType: "uint8",
+				internalType: "uint8"
 			},
 			{
 				name: "numbers",
 				type: "uint32",
-				internalType: "uint32",
-			},
+				internalType: "uint32"
+			}
 		],
-		stateMutability: "view",
+		stateMutability: "view"
 	},
 	{
 		type: "event",
@@ -388,10 +446,10 @@ export const LotteryRoundABI = [
 				name: "vrfCoordinator",
 				type: "address",
 				indexed: false,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -401,16 +459,16 @@ export const LotteryRoundABI = [
 				name: "from",
 				type: "address",
 				indexed: true,
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "to",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -420,16 +478,28 @@ export const LotteryRoundABI = [
 				name: "from",
 				type: "address",
 				indexed: true,
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "to",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
+	},
+	{
+		type: "event",
+		name: "RecoverInitiated",
+		inputs: [],
+		anonymous: false
+	},
+	{
+		type: "event",
+		name: "RefundInitiated",
+		inputs: [],
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -444,17 +514,17 @@ export const LotteryRoundABI = [
 					{
 						name: "symbol",
 						type: "uint8",
-						internalType: "uint8",
+						internalType: "uint8"
 					},
 					{
 						name: "numbers",
 						type: "uint32",
-						internalType: "uint32",
-					},
-				],
-			},
+						internalType: "uint32"
+					}
+				]
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -464,10 +534,10 @@ export const LotteryRoundABI = [
 				name: "requestId",
 				type: "uint256",
 				indexed: true,
-				internalType: "uint256",
-			},
+				internalType: "uint256"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "event",
@@ -477,10 +547,10 @@ export const LotteryRoundABI = [
 				name: "bet",
 				type: "address",
 				indexed: true,
-				internalType: "address",
-			},
+				internalType: "address"
+			}
 		],
-		anonymous: false,
+		anonymous: false
 	},
 	{
 		type: "error",
@@ -489,14 +559,14 @@ export const LotteryRoundABI = [
 			{
 				name: "have",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "want",
 				type: "address",
-				internalType: "address",
-			},
-		],
+				internalType: "address"
+			}
+		]
 	},
 	{
 		type: "error",
@@ -505,23 +575,23 @@ export const LotteryRoundABI = [
 			{
 				name: "have",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "owner",
 				type: "address",
-				internalType: "address",
+				internalType: "address"
 			},
 			{
 				name: "coordinator",
 				type: "address",
-				internalType: "address",
-			},
-		],
+				internalType: "address"
+			}
+		]
 	},
 	{
 		type: "error",
 		name: "ZeroAddress",
-		inputs: [],
-	},
+		inputs: []
+	}
 ] as const;
