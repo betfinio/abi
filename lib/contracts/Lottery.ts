@@ -28,25 +28,22 @@ export const LotteryABI = [
 				"internalType": "bytes32"
 			},
 			{
-				"name": "admin",
+				"name": "_admin",
+				"type": "address",
+				"internalType": "address"
+			},
+			{
+				"name": "_bonusPool",
+				"type": "address",
+				"internalType": "address"
+			},
+			{
+				"name": "_betSingleton",
 				"type": "address",
 				"internalType": "address"
 			}
 		],
 		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "CORE",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "bytes32",
-				"internalType": "bytes32"
-			}
-		],
-		"stateMutability": "view"
 	},
 	{
 		"type": "function",
@@ -184,6 +181,19 @@ export const LotteryABI = [
 	},
 	{
 		"type": "function",
+		"name": "bonusPool",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
 		"name": "cancelSubscription",
 		"inputs": [],
 		"outputs": [],
@@ -220,7 +230,7 @@ export const LotteryABI = [
 		"name": "createRound",
 		"inputs": [
 			{
-				"name": "_timestamp",
+				"name": "_finish",
 				"type": "uint256",
 				"internalType": "uint256"
 			}
@@ -659,6 +669,19 @@ export const LotteryABI = [
 	},
 	{
 		"type": "function",
+		"name": "setBetSingleton",
+		"inputs": [
+			{
+				"name": "_betSingleton",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"outputs": [],
+		"stateMutability": "nonpayable"
+	},
+	{
+		"type": "function",
 		"name": "setTicketPrice",
 		"inputs": [
 			{
@@ -841,24 +864,6 @@ export const LotteryABI = [
 	},
 	{
 		"type": "function",
-		"name": "updateFinish",
-		"inputs": [
-			{
-				"name": "_round",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "_finish",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
 		"name": "updateJackpot",
 		"inputs": [
 			{
@@ -935,25 +940,6 @@ export const LotteryABI = [
 	},
 	{
 		"type": "event",
-		"name": "BatchMetadataUpdate",
-		"inputs": [
-			{
-				"name": "_fromTokenId",
-				"type": "uint256",
-				"indexed": false,
-				"internalType": "uint256"
-			},
-			{
-				"name": "_toTokenId",
-				"type": "uint256",
-				"indexed": false,
-				"internalType": "uint256"
-			}
-		],
-		"anonymous": false
-	},
-	{
-		"type": "event",
 		"name": "JackpotWon",
 		"inputs": [
 			{
@@ -966,19 +952,6 @@ export const LotteryABI = [
 				"name": "amount",
 				"type": "uint256",
 				"indexed": true,
-				"internalType": "uint256"
-			}
-		],
-		"anonymous": false
-	},
-	{
-		"type": "event",
-		"name": "MetadataUpdate",
-		"inputs": [
-			{
-				"name": "_tokenId",
-				"type": "uint256",
-				"indexed": false,
 				"internalType": "uint256"
 			}
 		],
@@ -1080,7 +1053,7 @@ export const LotteryABI = [
 	},
 	{
 		"type": "event",
-		"name": "RoundFinished",
+		"name": "RoundRemoved",
 		"inputs": [
 			{
 				"name": "round",
@@ -1294,6 +1267,27 @@ export const LotteryABI = [
 			},
 			{
 				"name": "index",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		]
+	},
+	{
+		"type": "error",
+		"name": "FailedDeployment",
+		"inputs": []
+	},
+	{
+		"type": "error",
+		"name": "InsufficientBalance",
+		"inputs": [
+			{
+				"name": "balance",
+				"type": "uint256",
+				"internalType": "uint256"
+			},
+			{
+				"name": "needed",
 				"type": "uint256",
 				"internalType": "uint256"
 			}

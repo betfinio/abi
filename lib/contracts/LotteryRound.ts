@@ -70,6 +70,51 @@ export const LotteryRoundABI = [
 	},
 	{
 		"type": "function",
+		"name": "bets",
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "betsClaimed",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "betsCount",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
 		"name": "bitmaps",
 		"inputs": [
 			{
@@ -138,6 +183,19 @@ export const LotteryRoundABI = [
 	},
 	{
 		"type": "function",
+		"name": "finish",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
 		"name": "getBet",
 		"inputs": [
 			{
@@ -157,32 +215,6 @@ export const LotteryRoundABI = [
 	},
 	{
 		"type": "function",
-		"name": "getBetsCount",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "getFinish",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
 		"name": "getStatus",
 		"inputs": [],
 		"outputs": [
@@ -190,19 +222,6 @@ export const LotteryRoundABI = [
 				"name": "",
 				"type": "uint8",
 				"internalType": "uint8"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "getTicketsCount",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
 			}
 		],
 		"stateMutability": "view"
@@ -396,25 +415,25 @@ export const LotteryRoundABI = [
 	},
 	{
 		"type": "function",
+		"name": "ticketsCount",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256",
+				"internalType": "uint256"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
 		"name": "transferOwnership",
 		"inputs": [
 			{
 				"name": "to",
 				"type": "address",
 				"internalType": "address"
-			}
-		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "updateFinish",
-		"inputs": [
-			{
-				"name": "_finish",
-				"type": "uint256",
-				"internalType": "uint256"
 			}
 		],
 		"outputs": [],
@@ -447,19 +466,6 @@ export const LotteryRoundABI = [
 				"type": "address",
 				"indexed": false,
 				"internalType": "address"
-			}
-		],
-		"anonymous": false
-	},
-	{
-		"type": "event",
-		"name": "FinishUpdated",
-		"inputs": [
-			{
-				"name": "finish",
-				"type": "uint256",
-				"indexed": true,
-				"internalType": "uint256"
 			}
 		],
 		"anonymous": false

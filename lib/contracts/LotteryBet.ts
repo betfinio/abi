@@ -1,33 +1,7 @@
 export const LotteryBetABI = [
 	{
 		"type": "constructor",
-		"inputs": [
-			{
-				"name": "_player",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "_amount",
-				"type": "uint256",
-				"internalType": "uint256"
-			},
-			{
-				"name": "_game",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "_tokenId",
-				"type": "uint256",
-				"internalType": "uint256"
-			},
-			{
-				"name": "_round",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
+		"inputs": [],
 		"stateMutability": "nonpayable"
 	},
 	{
@@ -359,6 +333,39 @@ export const LotteryBetABI = [
 			}
 		],
 		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "initialize",
+		"inputs": [
+			{
+				"name": "_player",
+				"type": "address",
+				"internalType": "address"
+			},
+			{
+				"name": "_amount",
+				"type": "uint256",
+				"internalType": "uint256"
+			},
+			{
+				"name": "_game",
+				"type": "address",
+				"internalType": "address"
+			},
+			{
+				"name": "_tokenId",
+				"type": "uint256",
+				"internalType": "uint256"
+			},
+			{
+				"name": "_round",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"outputs": [],
+		"stateMutability": "nonpayable"
 	},
 	{
 		"type": "function",
