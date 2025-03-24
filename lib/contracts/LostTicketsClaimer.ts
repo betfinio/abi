@@ -1,29 +1,24 @@
-export const MultiBetABI = [
+export const LostTicketsClaimerABI = [
 	{
 		"type": "constructor",
 		"inputs": [
 			{
-				"name": "_token",
+				"name": "_admin",
 				"type": "address",
 				"internalType": "address"
 			},
 			{
-				"name": "_core",
+				"name": "_freeLines",
 				"type": "address",
 				"internalType": "address"
 			},
 			{
-				"name": "_pass",
-				"type": "address",
-				"internalType": "address"
+				"name": "_claimsPerLine",
+				"type": "uint256",
+				"internalType": "uint256"
 			},
 			{
 				"name": "_lottery",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "_admin",
 				"type": "address",
 				"internalType": "address"
 			}
@@ -32,20 +27,7 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "DEFAULT_ADMIN_ROLE",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "bytes32",
-				"internalType": "bytes32"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "EXCHANGE_RATE",
+		"name": "CLAIMS_PER_LINE",
 		"inputs": [],
 		"outputs": [
 			{
@@ -58,7 +40,7 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "MODULE",
+		"name": "DEFAULT_ADMIN_ROLE",
 		"inputs": [],
 		"outputs": [
 			{
@@ -84,17 +66,12 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "addFreeLines",
+		"name": "claimLostTickets",
 		"inputs": [
 			{
-				"name": "user",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "lines",
-				"type": "uint256",
-				"internalType": "uint256"
+				"name": "_tickets",
+				"type": "uint256[]",
+				"internalType": "uint256[]"
 			}
 		],
 		"outputs": [],
@@ -102,96 +79,32 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "addModule",
+		"name": "claimed",
 		"inputs": [
 			{
-				"name": "_module",
+				"name": "",
 				"type": "address",
 				"internalType": "address"
 			}
 		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "claim",
-		"inputs": [
+		"outputs": [
 			{
-				"name": "tokenId",
+				"name": "",
 				"type": "uint256",
 				"internalType": "uint256"
 			}
 		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
+		"stateMutability": "view"
 	},
 	{
 		"type": "function",
-		"name": "core",
+		"name": "freeLines",
 		"inputs": [],
 		"outputs": [
 			{
 				"name": "",
 				"type": "address",
-				"internalType": "contract CoreInterface"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "freeLines",
-		"inputs": [
-			{
-				"name": "",
-				"type": "address",
 				"internalType": "address"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "freeLinesUsed",
-		"inputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "getFreeLines",
-		"inputs": [
-			{
-				"name": "user",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
 			}
 		],
 		"stateMutability": "view"
@@ -259,25 +172,6 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "linesBought",
-		"inputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
 		"name": "lottery",
 		"inputs": [],
 		"outputs": [
@@ -288,152 +182,6 @@ export const MultiBetABI = [
 			}
 		],
 		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "multiPlaceBet",
-		"inputs": [
-			{
-				"name": "partner",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "games",
-				"type": "address[]",
-				"internalType": "address[]"
-			},
-			{
-				"name": "amounts",
-				"type": "uint256[]",
-				"internalType": "uint256[]"
-			},
-			{
-				"name": "datas",
-				"type": "bytes[]",
-				"internalType": "bytes[]"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[]",
-				"internalType": "address[]"
-			}
-		],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "onERC721Received",
-		"inputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "",
-				"type": "uint256",
-				"internalType": "uint256"
-			},
-			{
-				"name": "",
-				"type": "bytes",
-				"internalType": "bytes"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "bytes4",
-				"internalType": "bytes4"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "pass",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "contract PassInterface"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "placeBet",
-		"inputs": [
-			{
-				"name": "partner",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "game",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "amount",
-				"type": "uint256",
-				"internalType": "uint256"
-			},
-			{
-				"name": "data",
-				"type": "bytes",
-				"internalType": "bytes"
-			}
-		],
-		"outputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "removeFreeLines",
-		"inputs": [
-			{
-				"name": "user",
-				"type": "address",
-				"internalType": "address"
-			},
-			{
-				"name": "lines",
-				"type": "uint256",
-				"internalType": "uint256"
-			}
-		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
-	},
-	{
-		"type": "function",
-		"name": "removeModule",
-		"inputs": [
-			{
-				"name": "_module",
-				"type": "address",
-				"internalType": "address"
-			}
-		],
-		"outputs": [],
-		"stateMutability": "nonpayable"
 	},
 	{
 		"type": "function",
@@ -473,10 +221,10 @@ export const MultiBetABI = [
 	},
 	{
 		"type": "function",
-		"name": "setExchangeRate",
+		"name": "setClaimsPerLine",
 		"inputs": [
 			{
-				"name": "newRate",
+				"name": "_claimsPerLine",
 				"type": "uint256",
 				"internalType": "uint256"
 			}
@@ -499,19 +247,6 @@ export const MultiBetABI = [
 				"name": "",
 				"type": "bool",
 				"internalType": "bool"
-			}
-		],
-		"stateMutability": "view"
-	},
-	{
-		"type": "function",
-		"name": "token",
-		"inputs": [],
-		"outputs": [
-			{
-				"name": "",
-				"type": "address",
-				"internalType": "contract Token"
 			}
 		],
 		"stateMutability": "view"
