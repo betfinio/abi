@@ -30,6 +30,44 @@ export const RankABI = [
   },
   {
     "type": "function",
+    "name": "getCumulativeStakeForRank",
+    "inputs": [
+      {
+        "name": "rankName",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cumulative",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCumulativeVolumeForRank",
+    "inputs": [
+      {
+        "name": "rankName",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cumulative",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "getCurrentRankByStake",
     "inputs": [
       {
@@ -117,6 +155,45 @@ export const RankABI = [
       },
       {
         "name": "volume",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getNextRankByOrder",
+    "inputs": [
+      {
+        "name": "order",
         "type": "uint256",
         "internalType": "uint256"
       }
@@ -584,6 +661,11 @@ export const RankABI = [
         "internalType": "address"
       }
     ]
+  },
+  {
+    "type": "error",
+    "name": "RankByOrderNotFound",
+    "inputs": []
   },
   {
     "type": "error",
