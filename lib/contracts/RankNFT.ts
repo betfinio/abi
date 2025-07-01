@@ -1028,4 +1028,4 @@ export const RankNFTABI = [
       "name": "UserDoesNotHaveToken",
       "inputs": []
     }
-  ] as const 
+  ] as const
