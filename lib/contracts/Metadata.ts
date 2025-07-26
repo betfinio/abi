@@ -895,4 +895,4 @@ export const MetadataABI = [
         "name": "UniqueFieldTaken",
         "inputs": []
     }
-]
+] as const;
