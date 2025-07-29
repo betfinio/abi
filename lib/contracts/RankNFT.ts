@@ -11,6 +11,11 @@ export const RankNFTABI = [
         "name": "rankContractAddress",
         "type": "address",
         "internalType": "address"
+      },
+      {
+        "name": "tokenAddress",
+        "type": "address",
+        "internalType": "address"
       }
     ],
     "stateMutability": "nonpayable"
@@ -126,6 +131,19 @@ export const RankNFTABI = [
     ],
     "outputs": [],
     "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "contractURI",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
   },
   {
     "type": "function",
@@ -546,6 +564,19 @@ export const RankNFTABI = [
   },
   {
     "type": "function",
+    "name": "setContractURI",
+    "inputs": [
+      {
+        "name": "_contractURI",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "supportsInterface",
     "inputs": [
       {
@@ -572,6 +603,19 @@ export const RankNFTABI = [
         "name": "",
         "type": "string",
         "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "token",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IERC20"
       }
     ],
     "stateMutability": "view"
@@ -692,6 +736,31 @@ export const RankNFTABI = [
     "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "withdraw",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "rank",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "withdrawFunds",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
     "type": "event",
     "name": "Approval",
     "inputs": [
@@ -743,6 +812,70 @@ export const RankNFTABI = [
   },
   {
     "type": "event",
+    "name": "BatchMetadataUpdate",
+    "inputs": [
+      {
+        "name": "_fromTokenId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "_toTokenId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ContractURIUpdated",
+    "inputs": [
+      {
+        "name": "newURI",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "FundsWithdrawn",
+    "inputs": [
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MetadataUpdate",
+    "inputs": [
+      {
+        "name": "_tokenId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
     "name": "RankAcknowledged",
     "inputs": [
       {
@@ -781,6 +914,12 @@ export const RankNFTABI = [
         "type": "string",
         "indexed": false,
         "internalType": "string"
+      },
+      {
+        "name": "rankOrder",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
       }
     ],
     "anonymous": false
@@ -844,6 +983,12 @@ export const RankNFTABI = [
         "type": "string",
         "indexed": false,
         "internalType": "string"
+      },
+      {
+        "name": "rankOrder",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
       },
       {
         "name": "tokenId",
@@ -950,6 +1095,43 @@ export const RankNFTABI = [
         "type": "address",
         "indexed": true,
         "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TokensWithdrawn",
+    "inputs": [
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "rewardUser",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "rank",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "rankOrder",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
       }
     ],
     "anonymous": false
@@ -1147,12 +1329,27 @@ export const RankNFTABI = [
   },
   {
     "type": "error",
+    "name": "InsufficientTokenBalance",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InsufficientTokenBalanceForCurrentUserReward",
+    "inputs": []
+  },
+  {
+    "type": "error",
     "name": "InvalidSignature",
     "inputs": []
   },
   {
     "type": "error",
     "name": "InvalidUser",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NFTsArePermanent",
     "inputs": []
   },
   {
@@ -1177,6 +1374,16 @@ export const RankNFTABI = [
   },
   {
     "type": "error",
+    "name": "RankRewardAlreadyReserved",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "RankRewardNotRequested",
+    "inputs": []
+  },
+  {
+    "type": "error",
     "name": "RankUpdateHasToBeHigherThanCurrent",
     "inputs": []
   },
@@ -1184,6 +1391,17 @@ export const RankNFTABI = [
     "type": "error",
     "name": "ReentrancyGuardReentrantCall",
     "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "SafeERC20FailedOperation",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
   },
   {
     "type": "error",
