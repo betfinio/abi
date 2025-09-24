@@ -49,3 +49,4 @@ export * from "./contracts/LostTicketsClaimer.ts";
 export * from "./contracts/Rank.ts";
 export * from "./contracts/RankNFT.ts";
 export * from "./contracts/Metadata.ts";
+export * from "./contracts/Announcements.ts";
